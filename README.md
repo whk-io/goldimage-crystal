@@ -31,7 +31,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./job
+        working-directory: ./job # monorepo subfolder
 
     container:
       image: goldimage/crystal:v0.34.0-1-github
