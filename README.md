@@ -1,6 +1,6 @@
 # [Crystal Language](https://crystal-lang.org/) : Gold Image
 
-[Linted](https://github.com/hadolint/hadolint) and User Spaced Container Base Image
+[Linted](https://github.com/hadolint/hadolint) and updated to use current [20.04 LTS](https://hub.docker.com/_/ubuntu/)
 
 ## Pull image
 
