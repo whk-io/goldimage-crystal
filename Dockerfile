@@ -7,17 +7,8 @@ apt-key adv --fetch-keys https://keybase.io/crystal/pgp_keys.asc && \
 echo "deb https://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list && \
 apt-get update -y && \
 apt-get install -y --no-install-recommends crystal=0.34.0-1 \
-libssl-dev=1.1.1f-1ubuntu2 \
-libxml2-dev=2.9.10+dfsg-5 \
-libyaml-dev=0.2.2-1 \
-libgmp-dev=2:6.2.0+dfsg-4 \
-libreadline-dev=8.0-4 \
-zlib1g-dev=1:1.2.11.dfsg-2ubuntu1 && \
+git=1:2.25.1-1ubuntu3 && \
 apt-get -qq clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-useradd --uid 1993 --user-group crystal \
- && mkdir /crystal-app/ \
- && chown crystal:crystal /crystal-app/
-USER crystal
-ENV CRYSTAL_DIR /crystal-app/
-WORKDIR /crystal-app/
+mkdir /crystal-app
+WORKDIR /crystal-app
