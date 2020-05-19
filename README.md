@@ -10,6 +10,19 @@
 
 ```docker pull goldimage/crystal:v0.34.0-1-github``` : specific release with relaxed permissions for GitHub actions use
 
+## CVE Comparisons (Provided by [Trivy](https://github.com/aquasecurity/trivy))
+
+goldimage/crystal:v0.34.0-1
+Vulnerability Count: 125
+TARGETS: LOW = 18 : MEDIUM = 82 : HIGH = 23 : CRITICAL = 2 : UNKNOWN = 0
+COUNT:125
+
+crystallang/crystal
+Vulnerability Count: 464
+TARGETS: LOW = 45 : MEDIUM = 359 : HIGH = 57 : CRITICAL = 3 : UNKNOWN = 0
+COUNT:464
+
+
 ## Example Actions Pipeline
 
 In file .github/workflows/crystal.yml
