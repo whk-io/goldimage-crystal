@@ -10,5 +10,5 @@ apt-get install -y --no-install-recommends crystal=0.34.0-1 \
 git=1:2.25.1-1ubuntu3 && \
 apt-get -qq clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-mkdir /crystal-app
-WORKDIR /crystal-app
+mkdir /workspace
+WORKDIR /workspace

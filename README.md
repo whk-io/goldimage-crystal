@@ -1,6 +1,6 @@
 # [Crystal Language](https://crystal-lang.org/) : Gold Image
 
-[Crystal Language](https://crystal-lang.org/) Linted and User Spaced Container Base Image
+[Linted](https://github.com/hadolint/hadolint) and User Spaced Container Base Image
 
 ## Pull image
 
@@ -8,23 +8,22 @@
 
 ```docker pull goldimage/crystal:v0.34.0-1``` : specific release
 
-```docker pull goldimage/crystal:v0.34.0-1-github``` : specific release with relaxed permissions for GitHub actions use
 
 ## CVE Comparisons (Provided by [Trivy](https://github.com/aquasecurity/trivy))
 
 goldimage/crystal:v0.34.0-1
 
-Vulnerability Count: 125
+Vulnerability Count: 133
 
-TARGETS: LOW = 18 : MEDIUM = 82 : HIGH = 23 : CRITICAL = 2 : UNKNOWN = 0
+TARGETS: 1 : LOW = 22 : MEDIUM = 86 : HIGH = 23 : CRITICAL = 2 : UNKNOWN = 0
 
-COUNT:125
+COUNT:133
 
 crystallang/crystal
 
 Vulnerability Count: 464
 
-TARGETS: LOW = 45 : MEDIUM = 359 : HIGH = 57 : CRITICAL = 3 : UNKNOWN = 0
+TARGETS: 1 : LOW = 45 : MEDIUM = 359 : HIGH = 57 : CRITICAL = 3 : UNKNOWN = 0
 
 COUNT:464
 
@@ -52,12 +51,12 @@ jobs:
         working-directory: ./job # monorepo subfolder
 
     container:
-      image: goldimage/crystal:v0.34.0-1-github
+      image: goldimage/crystal:v0.34.0-1
 
     steps:
     - uses: actions/checkout@v2
     - name: install libraries
-      run: apt update -y && apt install -y liblzma5 liblzma-dev
+      run: apt update -y && apt install -y [your libs here]
     - name: Install dependencies
       run: shards install
     - name: Run tests
