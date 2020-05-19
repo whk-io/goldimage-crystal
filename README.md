@@ -12,6 +12,8 @@
 
 ## Example Actions Pipeline
 
+In file .github/workflows/crystal.yml
+
 ```yaml
 name: Crystal CI
 
